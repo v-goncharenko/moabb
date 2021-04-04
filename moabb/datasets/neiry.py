@@ -68,10 +68,10 @@ class DemonsP300(BaseDataset):
     ch_names = ["Cz", "P3", "Pz", "P4", "PO3", "PO4", "O1", "O2"]
     sampling_rate = 500.0
     url = "https://gin.g-node.org/v-goncharenko/neiry-demons/raw/master/nery_demons_dataset.zip"
+    slug = "demons"
 
     _ms_in_sec = 1000
     _hdf_path = "p300dataset"
-    _ds_folder_name = "demons"
 
     _act_dtype = np.dtype(
         [
@@ -176,8 +176,8 @@ class DemonsP300(BaseDataset):
         if subject not in self.subject_list:
             raise ValueError("Invalid subject number")
 
-        zip_path = Path(dl.data_path(self.url, self._ds_folder_name))
-        self.path = zip_path.parent / self._ds_folder_name / zip_path.stem
+        zip_path = Path(dl.data_path(self.url, self.slug))
+        self.path = zip_path.parent / self.slug / zip_path.stem
 
         if not self.path.exists():
             with zipfile.ZipFile(zip_path) as zip_file:
