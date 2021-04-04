@@ -30,6 +30,9 @@ jobs:
       - name: Run tests
         shell: bash
         run: |
+          echo 'XXXXXXXXXXX%%%%%%%%%%%%%%%%%'
+          python --version
+          poetry run python --version
           poetry run python -m unittest moabb.tests
       - name: Run pipelines
         shell: bash
