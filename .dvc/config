@@ -3,3 +3,5 @@
     remote = origin-gdrive
 ['remote "origin-gdrive"']
     url = gdrive://1cc4sIYuv9I6qs-8JHHXYBY3vW0c_IvPT
+    gdrive_client_id = 759249472617-v5pqb4qoiok6ms2pvbp73r2dq73a59hg.apps.googleusercontent.com
+    gdrive_client_secret = Fw6Yc3ZZcg3eI9pR5klsdCeD
